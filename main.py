@@ -3,7 +3,7 @@ import time
 from pynput.keyboard import Key, Listener
 from pynput.mouse import Controller
 
-SENSITIVITY = 5
+SENSITIVITY = 1
 INPUT_KEYS = set([Key.left, Key.right, Key.up, Key.down])
 X_OFFSET = {Key.left: -1, Key.right: 1}
 Y_OFFSET = {Key.up: -1, Key.down: 1}
@@ -42,6 +42,6 @@ with Listener(
 ) as listener:
     while True:
         input_mapper.update()
-        time.sleep(0.0025)
+        time.sleep(0.005)
 
     listener.join()
